@@ -1,0 +1,22 @@
+{% extends 'index.html' %}
+
+{% block head %}
+<title>Netflix</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/movie.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/all.css')}}">
+<link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.ico')}}" type="image/x-icon">
+{% endblock %}
+
+
+
+{% block image %}
+<div id="content1">
+    <p id="head1">{{movie_name}}</p>
+    <div id="content2">
+        <div id="movies">
+            <img src="{{ url_for('static', filename=link)}}" alt="NATURE">
+        </div>
+        <p id="decription"> {{description}}</p>
+    </div>
+</div>
+{% endblock image %}
